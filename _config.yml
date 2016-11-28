@@ -72,7 +72,8 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: https://github.com/kamusin/kamusin.github.io
 
 sitemap:
   path: sitemap.xml
