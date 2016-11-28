@@ -8,13 +8,15 @@ subtitle:
 description: new revamped personal space, planning to show what I have been doing in the DevOps arena and a touch of security
 author: Victor Vargas
 language:
+  - en
+  - es
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://www.korporation.cl
 root: /
-permalink: :year/:month/:title/
+permalink: :lang/:year/:month/:day/:title/
 permalink_defaults:
 
 # Directory
@@ -26,15 +28,17 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
+excerpt_link: Read More
+
 
 # Writing
-new_post_name: :year-:month-:day-:title.md # File name of new posts
+new_post_name: :lang/:year-:month-:day-:title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: true
+post_asset_folder: false
 relative_link: false
 future: true
 highlight:
@@ -69,3 +73,11 @@ theme: landscape
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
+
+sitemap:
+  path: sitemap.xml
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 10
