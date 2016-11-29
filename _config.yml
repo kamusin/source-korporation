@@ -74,6 +74,7 @@ theme: landscape
 deploy:
   type: git
   repo: https://github.com/kamusin/kamusin.github.io
+  message: New post/Content added on blog
 
 sitemap:
   path: sitemap.xml
