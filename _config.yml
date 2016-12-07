@@ -72,10 +72,11 @@ theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
-  repo: https://github.com/kamusin/kamusin.github.io
-  message: New post/Content added on blog
-
+  - type: git
+    repo: https://github.com/kamusin/kamusin.github.io
+    message: New post/Content added on blog
+    branch: master
+ 
 sitemap:
   path: sitemap.xml
 
