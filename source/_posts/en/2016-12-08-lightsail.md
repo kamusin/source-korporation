@@ -32,3 +32,5 @@ Going back to the main Resorces page, you are allowed to create and hosted your 
 In overal, AWS LightSail it is an alternative to all the other VPS providers out there with the advantage that you can integrate your instance with other AWS stacks like RDS, ElastiCache and so on, the magic happens when you enable the "VPC Peering option in your account".
 
 {% asset_img vpcpeering.png Magic Button - VPC Peering %}
+
+That's it for now! :)
