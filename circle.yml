@@ -3,3 +3,6 @@ deployment:
     branch: source
     commands:
       - $DOCKER_HUB_TRIGGER
+test:
+  override:
+    - bundle exec rake test
