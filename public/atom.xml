@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Because sometimes it is not ok...</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://www.korporation.cl/"/>
+  <updated>2016-12-09T09:10:13.000Z</updated>
+  <id>http://www.korporation.cl/</id>
+  
+  <author>
+    <name>Victor Vargas</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AWS Lightsail overview</title>
+    <link href="http://www.korporation.cl/en/2016/12/08/lightsail/"/>
+    <id>http://www.korporation.cl/en/2016/12/08/lightsail/</id>
+    <published>2016-12-07T21:56:44.000Z</published>
+    <updated>2016-12-09T09:10:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>AWS Reinvent is over and lot of stuffs were launched last week, since you can go ahead and read all about the new instances, IA and other features <a href="https://aws.amazon.com/new/reinvent/?nc1=h_ls" target="_blank" rel="external">here</a> the purpose of this entry is just review and talk a bit about LightSail or also known as DigitalOcean killer. </p>
+
+<p>As you may know, AWS LightSail it is under preview and only available in the US and under Zones A, C, D and E at this stage (I’m sure it is going to be expanded soon to other regions). </p>
+<img src="/en/2016/12/08/lightsail/availabilityzones.png" alt="Zones Available" title="Zones Available">
+<p>Price starts from $5USD (same price as DigitalOcean) to $80USD and the instance type you can choose as base OS are Amazon Linux 2016.09.0 or Ubuntu 16.04 LTS, which are kind of limited but I got this is only a preview. However, there is an alternative to deploy a full application stack like for example Wordpress, Drupal, GitLab or the classic LAMP. </p>
+<img src="/en/2016/12/08/lightsail/instancetypes.png" alt="Instance Types Available" title="Instance Types Available">
+<p>Once you have deployed an instance, there is a panel that allows you to SSH using your browser, some basic metrics like CPU, Network utilisation, Firewall/SecurityGroup, Snapshots, History and Delete.</p>
+<img src="/en/2016/12/08/lightsail/graphs.png" alt="Graphs and Statistics" title="Graphs and Statistics">
+<p>Going back to the main Resorces page, you are allowed to create and hosted your DNS name with LightSail for free, all you need to do is click on “Create other resources –&gt; DNS Zone” and write down the name of your domain, after previous step completed you can go to your NIC and update your DNS servers, easy peasy. Another neat thing, the service allows you to create and assign up to 5 Public IP to your instance for “free”, so no need to extra payment for that.</p>
+<img src="/en/2016/12/08/lightsail/dnszone.png" alt="FREE DNS Zone" title="FREE DNS Zone">
+<p>In overal, AWS LightSail it is an alternative to all the other VPS providers out there with the advantage that you can integrate your instance with other AWS stacks like RDS, ElastiCache and so on, the magic happens when you enable the “VPC Peering option in your account”.</p>
+<img src="/en/2016/12/08/lightsail/vpcpeering.png" alt="Magic Button - VPC Peering" title="Magic Button - VPC Peering">
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;AWS Reinvent is over and lot of stuffs were launched last week, since you can go ahead and read all about the new instances, IA and other
+    
+    </summary>
+    
+    
+      <category term="AWS" scheme="http://www.korporation.cl/tags/AWS/"/>
+    
+      <category term="DevOps" scheme="http://www.korporation.cl/tags/DevOps/"/>
+    
+      <category term="lightsail" scheme="http://www.korporation.cl/tags/lightsail/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>new beginning</title>
+    <link href="http://www.korporation.cl/en/2016/11/27/new-beginning/"/>
+    <id>http://www.korporation.cl/en/2016/11/27/new-beginning/</id>
+    <published>2016-11-27T12:16:27.000Z</published>
+    <updated>2016-11-27T12:18:11.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p><strong> “Kill the boy, Jon Snow. Winter is almost upon us. Kill the boy and let the man be born.” </strong></p>
+</blockquote>
+<p><img src="/images/ending.jpg" alt="New Era"></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;&lt;p&gt;&lt;strong&gt; “Kill the boy, Jon Snow. Winter is almost upon us. Kill the boy and let the man be born.” &lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote
+    
+    </summary>
+    
+    
+      <category term="Default" scheme="http://www.korporation.cl/tags/Default/"/>
+    
+  </entry>
+  
+</feed>

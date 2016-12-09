@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>AWS Lightsail overview | Because sometimes it is not ok...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="AWS Reinvent is over and lot of stuffs were launched last week, since you can go ahead and read all about the new instances, IA and other features here the purpose of this entry is just review and tal">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AWS Lightsail overview">
+<meta property="og:url" content="http://www.korporation.cl/en/2016/12/08/lightsail/index.html">
+<meta property="og:site_name" content="Because sometimes it is not ok...">
+<meta property="og:description" content="AWS Reinvent is over and lot of stuffs were launched last week, since you can go ahead and read all about the new instances, IA and other features here the purpose of this entry is just review and tal">
+<meta property="og:image" content="http://www.korporation.cl/en/2016/12/08/lightsail/availabilityzones.png">
+<meta property="og:image" content="http://www.korporation.cl/en/2016/12/08/lightsail/instancetypes.png">
+<meta property="og:image" content="http://www.korporation.cl/en/2016/12/08/lightsail/graphs.png">
+<meta property="og:image" content="http://www.korporation.cl/en/2016/12/08/lightsail/dnszone.png">
+<meta property="og:image" content="http://www.korporation.cl/en/2016/12/08/lightsail/vpcpeering.png">
+<meta property="og:updated_time" content="2016-12-09T09:10:13.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="AWS Lightsail overview">
+<meta name="twitter:description" content="AWS Reinvent is over and lot of stuffs were launched last week, since you can go ahead and read all about the new instances, IA and other features here the purpose of this entry is just review and tal">
+<meta name="twitter:image" content="http://www.korporation.cl/en/2016/12/08/lightsail/availabilityzones.png">
+<meta name="twitter:creator" content="@kamusin">
+  
+    <link rel="alternate" href="/atom.xml" title="Because sometimes it is not ok..." type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-88028269-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Because sometimes it is not ok...</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/about">About</a>
+        
+          <a class="main-nav-link" href="/contact">Contact</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://www.korporation.cl"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-lightsail" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/en/2016/12/08/lightsail/" class="article-date">
+  <time datetime="2016-12-07T21:56:44.000Z" itemprop="datePublished">2016-12-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      AWS Lightsail overview
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>AWS Reinvent is over and lot of stuffs were launched last week, since you can go ahead and read all about the new instances, IA and other features <a href="https://aws.amazon.com/new/reinvent/?nc1=h_ls" target="_blank" rel="external">here</a> the purpose of this entry is just review and talk a bit about LightSail or also known as DigitalOcean killer. </p>
+
+<p>As you may know, AWS LightSail it is under preview and only available in the US and under Zones A, C, D and E at this stage (I’m sure it is going to be expanded soon to other regions). </p>
+<img src="/en/2016/12/08/lightsail/availabilityzones.png" alt="Zones Available" title="Zones Available">
+<p>Price starts from $5USD (same price as DigitalOcean) to $80USD and the instance type you can choose as base OS are Amazon Linux 2016.09.0 or Ubuntu 16.04 LTS, which are kind of limited but I got this is only a preview. However, there is an alternative to deploy a full application stack like for example Wordpress, Drupal, GitLab or the classic LAMP. </p>
+<img src="/en/2016/12/08/lightsail/instancetypes.png" alt="Instance Types Available" title="Instance Types Available">
+<p>Once you have deployed an instance, there is a panel that allows you to SSH using your browser, some basic metrics like CPU, Network utilisation, Firewall/SecurityGroup, Snapshots, History and Delete.</p>
+<img src="/en/2016/12/08/lightsail/graphs.png" alt="Graphs and Statistics" title="Graphs and Statistics">
+<p>Going back to the main Resorces page, you are allowed to create and hosted your DNS name with LightSail for free, all you need to do is click on “Create other resources –&gt; DNS Zone” and write down the name of your domain, after previous step completed you can go to your NIC and update your DNS servers, easy peasy. Another neat thing, the service allows you to create and assign up to 5 Public IP to your instance for “free”, so no need to extra payment for that.</p>
+<img src="/en/2016/12/08/lightsail/dnszone.png" alt="FREE DNS Zone" title="FREE DNS Zone">
+<p>In overal, AWS LightSail it is an alternative to all the other VPS providers out there with the advantage that you can integrate your instance with other AWS stacks like RDS, ElastiCache and so on, the magic happens when you enable the “VPC Peering option in your account”.</p>
+<img src="/en/2016/12/08/lightsail/vpcpeering.png" alt="Magic Button - VPC Peering" title="Magic Button - VPC Peering">
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.korporation.cl/en/2016/12/08/lightsail/" data-id="ciwhkrawm0000up4hitt5133u" class="article-share-link">Share</a>
+      
+        <a href="http://www.korporation.cl/en/2016/12/08/lightsail/#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AWS/">AWS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DevOps/">DevOps</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lightsail/">lightsail</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/en/2016/11/27/new-beginning/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">new beginning</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/AWS/" style="font-size: 10px;">AWS</a> <a href="/tags/Default/" style="font-size: 10px;">Default</a> <a href="/tags/DevOps/" style="font-size: 10px;">DevOps</a> <a href="/tags/lightsail/" style="font-size: 10px;">lightsail</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/12/">December 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">November 2016</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/en/2016/12/08/lightsail/">AWS Lightsail overview</a>
+          </li>
+        
+          <li>
+            <a href="/en/2016/11/27/new-beginning/">new beginning</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; http://www.korporation.cl | 2016 <br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+    <a href="/contact" class="mobile-nav-link">Contact</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'korporation-1';
+  
+  var disqus_url = 'http://www.korporation.cl/en/2016/12/08/lightsail/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
